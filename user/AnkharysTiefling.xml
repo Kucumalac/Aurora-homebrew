@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Alecani</name>
+		<description></description>
+	    <update version="1.0">
+			<file name="race-Alecani.xml" url=""/>
+		</update>
+	</info>
+
+  <element name="Tiefling (Ankharys)" type="Race" source="Homebrew" id="IID_HMBRW_RACE_TIEFLING">
+    <description>
+      <h4>Tiefling</h4>
+      <p>These fox-like winged creatures are often found up in the mountains or hard to reach places. They're a very friendly people, welcoming of all travelers that don't bear ill will.</p> 
+      <span class="feature">Ability Score Increase.</span>A Tieflingek karakteralkotáskor +2 Wisdom és +1 Charisma értéket kapnak.<br/>
+      <span class="feature">Age.</span>A Tieflingek 19 éves kortól számítanak felnőttnek. Lélekszipolyozással meghosszabbíthatját az életüket.<br/>
+      <span class="feature">Size.</span>A Tieflingek 5' (~152 cm) és 6'2" (~200 cm) között bárhova eshetnek magasságban, közepes (medium) méretűnek számítanak.<br/>
+      <span class="feature">Speed.</span>Sebességük 30 feet körönként.<br/>
+      <span class="feature">Lélekszipolyozás.</span> A Tieflingek különleges képessége, mellyel hosszabb érintéssel (harcban egy kör), elszívhatják egy másik személy lélekenergiájának egy részét, amivel életpontokat és spell slopokat nyerhetnek vissza. Ez egy concentration spell-nek minősül.<br/>
+      <span class="feature">Szarvak.</span>Amennyiben a Tiefling olyan irányba fejel, amerre a szarva áll, pusztakezes sebzéséhet +2 bludeoning damage adható.<br/>
+    </description>
+    <sheet display="false"/>
+    <rules>
+      <stat name="wisdom" value="2"/>
+      <stat name="charisma" value="1"/>
+      <stat name="innate speed" value="30" bonus="base"/>
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <select type="Language" name="ID_LANGUAGE_ORC" />
+      <grant type="Racial Trait" id="ID_HMBRW_RACIAL_TRAIT_ALECANI_LELEKSZIPOLY" />
+      <grant type="Racial Trait" id="ID_HMBRW_RACIAL_TRAIT_ALECANI_SZARVAK" />
+    </rules>
+  </element>
+  
+   <element name="Lélekszipolyozás" type="Racial Trait" source="Homebrew" id="ID_HMBRW_RACIAL_TRAIT_ALECANI_LELEKSZIPOLY">
+    <description>
+			<p> Concentration Spell, 1 turn: elszívhatják egy másik személy lélekenergiájának egy részét. A célpont Constitution shaving throw-t dobhat, amely ha sikeres, akkor a képesség sikertelen. Az így szipolyozott energiával feltölthetik mágikus képességeiket (1d4 spell slot), illetve 1d4-et gyógyulnak.</p>
+      <p> Dönthetnek úgy, hogy valakit teljesen lecsapolnak, ilyenkor a célpont ellen sikeres grapple manővert kell tenniük -2 módosítóval. Ha sikeres a manőver, az áldozat belehal a szipolyozásba. Ekkor a Tieflingek visszanyerik az összes spell slotjukat, illetve minden sebüket begyógyítják, viszont Level 2-es exhaustion sújtja őket a következő hosszú pihenőjük után.</p>
+      <p> Ez mágikus képesség, így bármilyen mágiaérzékeléssel felfedezhető, amikor alkalmazzák.</p>
+		</description>
+		<sheet>
+			<description>
+      <p> Concentration Spell, 1 turn: elszívhatják egy másik személy lélekenergiájának egy részét. A célpont Constitution shaving throw-t dobhat, amely ha sikeres, akkor a képesség sikertelen. Az így szipolyozott energiával feltölthetik mágikus képességeiket (1d4 spell slot), illetve 1d4-et gyógyulnak.</p>
+      <p> Dönthetnek úgy, hogy valakit teljesen lecsapolnak, ilyenkor a célpont ellen sikeres grapple manővert kell tenniük -2 módosítóval. Ha sikeres a manőver, az áldozat belehal a szipolyozásba. Ekkor a Tieflingek visszanyerik az összes spell slotjukat, illetve minden sebüket begyógyítják, viszont Level 2-es exhaustion sújtja őket a következő hosszú pihenőjük után.</p>
+      <p> Ez mágikus képesség, így bármilyen mágiaérzékeléssel felfedezhető, amikor alkalmazzák.</p>
+      </description>
+		</sheet>
+  </element>
+
+  <element name="Szarvak" type="Racial Trait" source="Homebrew" id="ID_HMBRW_RACIAL_TRAIT_ALECANI_SZARVAK">
+    <description>
+			<p> Amennyiben a Tiefling olyan irányba fejel, amerre a szarva áll, pusztakezes (unarmed) sebzéséhet +2 bludeoning damage adható.</p>
+		</description>
+		<sheet>
+			<description> Amennyiben a Tiefling olyan irányba fejel, amerre a szarva áll, pusztakezes (unarmed) sebzéséhet +2 bludeoning damage adható.</description>
+		</sheet>
+  </element>
+</elements>
